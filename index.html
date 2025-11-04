@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            100: '#f5ece5',
+                            200: '#e6d5c3',
+                            300: '#d4b997',
+                            400: '#c49a6b',
+                            500: '#b07d4a',
+                            600: '#8e6439',
+                            700: '#6b4b2a',
+                            800: '#48321c',
+                            900: '#25190e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-coffee-100 font-sans">
+  <!-- Navigation -->
+    <nav class="bg-coffee-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold">Brew Haven</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-coffee-300 transition">Home</a>
+                    <a href="#about" class="hover:text-coffee-300 transition">About</a>
+                    <a href="#menu" class="hover:text-coffee-300 transition">Menu</a>
+                    <a href="#contact" class="hover:text-coffee-300 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 hover:text-coffee-300 transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="p-2 hover:text-coffee-300 transition relative" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-1 -right-1 bg-coffee-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" id="cart-count">0</span>
+                    </button>
+                </div>
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-coffee-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:bg-coffee-600 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 hover:bg-coffee-600 rounded-md">About</a>
+                <a href="#menu" class="block px-3 py-2 hover:bg-coffee-600 rounded-md">Menu</a>
+                <a href="#contact" class="block px-3 py-2 hover:bg-coffee-600 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-coffee-900 text-white overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+             alt="Coffee beans" 
+             class="absolute w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Artisan Coffee Crafted with Care</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Discover the perfect blend of quality beans and expert brewing at Brew Haven</p>
+            <div class="space-x-4">
+                <a href="#menu" class="bg-coffee-500 text-white px-8 py-3 rounded-full font-bold hover:bg-coffee-600 transition duration-300 inline-block">View Menu</a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-coffee-800 transition duration-300 inline-block">Visit Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-coffee-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-coffee-800 mb-6">Our Story</h2>
+                    <p class="text-coffee-700 mb-4">Founded in 2010, Brew Haven began as a small passion project between two coffee enthusiasts who wanted to share their love for specialty coffee with their community.</p>
+                    <p class="text-coffee-700 mb-4">We source our beans directly from ethical farms around the world, ensuring fair compensation for farmers and the highest quality for our customers.</p>
+                    <p class="text-coffee-700">Every cup is carefully crafted by our trained baristas who take pride in their art. We're not just serving coffee - we're creating experiences.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Coffee shop interior" 
+                             class="rounded-lg shadow-lg h-64 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Barista making coffee" 
+                             class="rounded-lg shadow-lg h-64 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Coffee beans" 
+                             class="rounded-lg shadow-lg h-64 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="People enjoying coffee" 
+                             class="rounded-lg shadow-lg h-64 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-coffee-800 mb-12">Our Menu</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-coffee-700 mb-6">Coffee Drinks</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="coffee-menu">
+                    <!-- Coffee items will be loaded here via JavaScript -->
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold text-coffee-700 mb-6">Food & Pastries</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="food-menu">
+                    <!-- Food items will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-coffee-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-coffee-800 mb-12">Visit Us</h2>
+            
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-coffee-700 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-coffee-500 mt-1 mr-3"></i>
+                                <p>123 Brew Street, Coffeeville, CA 90210</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-coffee-500 mr-3"></i>
+                                <p>(555) 123-4567</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-coffee-500 mr-3"></i>
+                                <p>hello@brewhaven.com</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold text-coffee-700 mt-8 mb-4">Hours</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span>6:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday</span>
+                                <span>7:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>7:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="h-full w-full rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209121995!2d-73.9878449245251!3d40.74844097138992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1687897923902!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 400px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="fixed inset-y-0 right-0 w-full md:w-96 bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto" id="cart-sidebar">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-coffee-800">Your Order</h3>
+                <button id="close-cart" class="text-coffee-500 hover:text-coffee-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="divide-y divide-coffee-200" id="cart-items">
+                <!-- Cart items will be loaded here -->
+                <p class="py-4 text-coffee-500" id="empty-cart-message">Your cart is empty</p>
+            </div>
+            <div class="mt-6 border-t border-coffee-200 pt-6">
+                <div class="flex justify-between mb-2">
+                    <span class="text-coffee-600">Subtotal</span>
+                    <span class="font-bold" id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-coffee-600">Tax (8%)</span>
+                    <span class="font-bold" id="cart-tax">$0.00</span>
+                </div>
+                <div class="flex justify-between text-lg font-bold mt-4">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="w-full bg-coffee-600 text-white py-3 rounded-lg mt-6 hover:bg-coffee-700 transition duration-300" id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Brew Haven</h3>
+                    <p class="text-coffee-300">Artisan coffee crafted with care since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-coffee-300 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-coffee-300 hover:text-white">About</a></li>
+                        <li><a href="#menu" class="text-coffee-300 hover:text-white">Menu</a></li>
+                        <li><a href="#contact" class="text-coffee-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-coffee-300 mb-2">Subscribe for updates and special offers</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-coffee-800">
+                        <button class="bg-coffee-600 px-4 py-2 rounded-r-lg hover:bg-coffee-700 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-coffee-700 mt-8 pt-8 text-center text-coffee-300">
+                <p>&copy; 2023 Brew Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/file01.js"></script>
+</body>
+</html>
