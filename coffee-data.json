@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Espresso",
+      "price": 2.50,
+      "category": "espresso",
+      "description": "Café espresso intenso y aromático",
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574"
+    },
+    {
+      "id": 2,
+      "name": "Cappuccino",
+      "price": 3.75,
+      "category": "cafe-con-leche",
+      "description": "Espresso con leche vaporizada y espuma",
+      "image": "https://images.unsplash.com/photo-1561047029-3000c68339ca"
+    },
+    {
+      "id": 3,
+      "name": "Latte",
+      "price": 4.00,
+      "category": "cafe-con-leche",
+      "description": "Espresso con leche vaporizada",
+      "image": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400"
+    },
+    {
+      "id": 4,
+      "name": "Matcha Latte",
+      "price": 4.75,
+      "category": "te-e-infusiones",
+      "description": "Té matcha con leche vaporizada, antioxidante y energético",
+      "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400"
+    },
+    {
+      "id": 5,
+      "name": "Flat White",
+      "price": 4.25,
+      "category": "cafe-con-leche",
+      "description": "Espresso con leche microespumada y cremoso",
+      "image": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400"
+    },
+    {
+      "id": 6,
+      "name": "Té Negro",
+      "price": 2.50,
+      "category": "te-e-infusiones",
+      "description": "Té negro de calidad premium, robusto y aromático",
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400"
+    }
+  ]
+}
