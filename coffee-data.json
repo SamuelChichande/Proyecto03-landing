@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "name": "Latte",
-      "price": 4.00,
+      "name": "Mocha",
+      "price": 4.50,
       "category": "cafe-con-leche",
-      "description": "Espresso con leche vaporizada",
-      "image": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400"
+      "description": "Espresso con chocolate y leche vaporizada",
+      "image": "https://www.cabucoffee.com/newimages/Cafe-Moca.jpg"
     },
     {
       "id": 4,
