@@ -16,7 +16,7 @@ let fetchProducts = (url) => {
 
             return {
                 success: true,
-                body: data
+                body: data.products
             };
 
         })
