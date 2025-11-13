@@ -206,15 +206,15 @@
 
 
     <!-- Sección de Reseñas -->
-    <section id="reviews" class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 md:px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-amber-900 text-center mb-4">Lo que dicen nuestros clientes
             </h2>
             <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Comparte tu experiencia y descubre por qué
                 somos la cafetería favorita</p>
 
-            <!-- Reseñas Existentes -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Reseñas por defecto -->
+            <div id="reviews" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
                 <!-- Reseña 1 -->
                 <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
                     <div class="flex items-center mb-4">
@@ -333,11 +333,11 @@
             <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8">
                 <h3 class="text-2xl font-bold text-amber-900 mb-6 text-center">Comparte tu experiencia</h3>
 
-                <form class="space-y-6">
+                <form id="form_review" class="space-y-6">
                     <!-- Nombre -->
                     <div>
                         <label for="user-name" class="block text-gray-700 font-medium mb-2">Tu nombre</label>
-                        <input type="text" id="user-name" name="name"
+                        <input type="text" id="user_name" name="name"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                             placeholder="¿Cómo te llamas?" required>
                     </div>
@@ -345,19 +345,20 @@
                     <!-- Calificación con estrellas -->
                     <div>
                         <label class="block text-gray-700 font-medium mb-2">Tu calificación</label>
-                        <div class="flex space-x-2">
-                            <span class="text-2xl cursor-pointer text-gray-300 hover:text-amber-400">★</span>
-                            <span class="text-2xl cursor-pointer text-gray-300 hover:text-amber-400">★</span>
-                            <span class="text-2xl cursor-pointer text-gray-300 hover:text-amber-400">★</span>
-                            <span class="text-2xl cursor-pointer text-gray-300 hover:text-amber-400">★</span>
-                            <span class="text-2xl cursor-pointer text-gray-300 hover:text-amber-400">★</span>
+                        <div class="flex space-x-2" id="star-rating">
+                            <span class="text-2xl cursor-pointer text-gray-300" data-rating="1">★</span>
+                            <span class="text-2xl cursor-pointer text-gray-300" data-rating="2">★</span>
+                            <span class="text-2xl cursor-pointer text-gray-300" data-rating="3">★</span>
+                            <span class="text-2xl cursor-pointer text-gray-300" data-rating="4">★</span>
+                            <span class="text-2xl cursor-pointer text-gray-300" data-rating="5">★</span>
                         </div>
+                        <input type="hidden" id="rating_value" name="rating" value="0">
                     </div>
-
+                    
                     <!-- Comentario -->
                     <div>
                         <label for="user-comment" class="block text-gray-700 font-medium mb-2">Tu reseña</label>
-                        <textarea id="user-comment" name="comment" rows="4"
+                        <textarea id="user_comment" name="comment" rows="4"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                             placeholder="Cuéntanos sobre tu experiencia en Origen Café..." required></textarea>
                     </div>
@@ -366,7 +367,7 @@
                     <div>
                         <label for="favorite-product" class="block text-gray-700 font-medium mb-2">¿Qué te gustó
                             más?</label>
-                        <select id="favorite-product" name="favoriteProduct"
+                        <select id="favorite_product" name="favoriteProduct"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                             <option value="">Selecciona tu favorito</option>
                             <option value="Espresso">Espresso</option>
@@ -448,6 +449,7 @@
         </div>
     </footer>
     <script type="module" src="src/js/file01.js"></script>
+    <script type="module" src="src/js/cailificacion.js"></script>
 </body>
 
 </html>
