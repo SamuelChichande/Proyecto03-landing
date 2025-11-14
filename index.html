@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffe</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .hero-container {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cafeconpan.mx/wp-content/uploads/2023/11/espressino-desayuno.jpg');
@@ -17,7 +18,7 @@
     </style>
 </head>
 
-<body class="bg-amber-50 text-amber-900">
+<body id="home" class="bg-amber-50 text-amber-900">
     <header class="w-full z-50">
         <div class="hero-container min-h-screen">
             <!-- Menú -->
@@ -26,23 +27,23 @@
                     <div class="text-2xl md:text-3xl font-bold text-white">Origen Café</div>
                     <nav>
                         <ul class="flex space-x-6 md:space-x-8">
-                            <li><a href="#home"
-                                    class="text-white font-medium hover:text-amber-200 transition duration-300">Inicio</a>
+                            <li><a href="#"
+                                    class="text-white font-medium hover:text-amber-800 transition duration-300">Inicio</a>
                             </li>
                             <li><a href="#about"
-                                    class="text-white font-medium hover:text-amber-200 transition duration-300">Nosotros</a>
+                                    class="text-white font-medium hover:text-amber-800 transition duration-300">Nosotros</a>
                             </li>
                             <li><a href="#menu"
-                                    class="text-white font-medium hover:text-amber-200 transition duration-300">Menu</a>
+                                    class="text-white font-medium hover:text-amber-800 transition duration-300">Menu</a>
                             </li>
-                            <li><a href="#promotion"
-                                    class="text-white font-medium hover:text-amber-200 transition duration-300">Promos</a>
+                            <li><a href="#promos"
+                                    class="text-white font-medium hover:text-amber-800 transition duration-300">Promos</a>
                             </li>
-                            <li><a href="#review"
-                                    class="text-white font-medium hover:text-amber-200 transition duration-300">Reseñas</a>
+                            <li><a href="#reseñas"
+                                    class="text-white font-medium hover:text-amber-800 transition duration-300">Reseñas</a>
                             </li>
                             <li><a href="#contact"
-                                    class="text-white font-medium hover:text-amber-200 transition duration-300">Contacto</a>
+                                    class="text-white font-medium hover:text-amber-800 transition duration-300">Contacto</a>
                             </li>
                         </ul>
                     </nav>
@@ -63,9 +64,10 @@
         </div>
     </header>
 
+    <!-- Sección Sobre Nosotros -->
     <section id="about" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 md:px-6 flex grid grid-cols-2 gap-4 items-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center col-span-2">Our Story</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center col-span-2">Nuestra Historia</h2>
             <div class="max-w-3xl mx-auto text-center">
                 <p class="text-lg md:text-xl mb-8">Somos una cafetería artesanal comprometida con el sabor y la
                     sostenibilidad. Usamos granos seleccionados de pequeños caficultores ecuatorianos para ofrecerte una
@@ -75,9 +77,10 @@
         </div>
     </section>
 
+    <!-- Sección Menu -->
     <section id="menu" class="py-16 md:py-24 bg-coffee-light">
         <div class="container mx-auto px-4 md:px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Menu</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestro Menu</h2>
 
             <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Producto 1 -->
@@ -137,7 +140,7 @@
     </section>
 
     <!-- Sección Promociones -->
-    <section class="bg-white py-6">
+    <section id="promos" class="bg-white py-6">
         <div class="max-w-6xl mx-auto px-4 md:px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-black text-center mb-2">Promociones Especiales</h2>
             <p class="text-black text-center mb-8 max-w-2xl mx-auto">Disfruta de nuestras ofertas exclusivas y combos
@@ -150,9 +153,9 @@
                 <div class="w-44 flex-shrink-0">
                     <img src="https://png.pngtree.com/png-clipart/20241102/original/pngtree-d-deluxe-cappuccino-coffee-with-lush-cream-in-chic-cup-on-png-image_16664315.png"
                         alt="Cappuccino Deluxe" class="w-full h-44 object-contain mx-auto" />
-                    <p class="text-lg font-bold mt-2">$5.00</p>
+                    <p class="text-lg font-bold mt-2">$4.00</p>
                     <p class="inline-block text-sm bg-yellow-400 text-black font-semibold px-2 py-0.5 rounded">
-                        -20% <span class="line-through text-gray-500 ml-2">$4.00</span>
+                        -20% <span class="line-through text-gray-500 ml-2">$5.00</span>
                     </p>
                     <p class="text-sm text-gray-700 mt-1">Cappuccino Deluxe</p>
                 </div>
@@ -161,9 +164,9 @@
                 <div class="w-44 flex-shrink-0">
                     <img src="https://hansel-gretel.com/wp-content/uploads/2024/09/Torta-humeda-chocolate.png"
                         alt="Torta de Chocolate" class="w-full h-44 object-contain mx-auto" />
-                    <p class="text-lg font-bold mt-2">$4.50</p>
+                    <p class="text-lg font-bold mt-2">$3.83</p>
                     <p class="inline-block text-sm bg-yellow-400 text-black font-semibold px-2 py-0.5 rounded">
-                        -15% <span class="line-through text-gray-500 ml-2">$3.83</span>
+                        -15% <span class="line-through text-gray-500 ml-2">$4.50</span>
                     </p>
                     <p class="text-sm text-gray-700 mt-1">Torta de Chocolate</p>
                 </div>
@@ -172,9 +175,9 @@
                 <div class="w-44 flex-shrink-0">
                     <img src="https://png.pngtree.com/png-clipart/20240723/original/pngtree-iced-coffee-and-latte-in-to-go-cups-on-transparent-background-png-image_15618006.png"
                         alt="Café Frío con Leche" class="w-full h-44 object-contain mx-auto" />
-                    <p class="text-lg font-bold mt-2">$4.80</p>
+                    <p class="text-lg font-bold mt-2">$3.60</p>
                     <p class="inline-block text-sm bg-yellow-400 text-black font-semibold px-2 py-0.5 rounded">
-                        -25% <span class="line-through text-gray-500 ml-2">$3.60</span>
+                        -25% <span class="line-through text-gray-500 ml-2">$4.80</span>
                     </p>
                     <p class="text-sm text-gray-700 mt-1">Café Frío con Leche</p>
                 </div>
@@ -183,9 +186,9 @@
                 <div class="w-44 flex-shrink-0">
                     <img src="https://png.pngtree.com/png-clipart/20231230/original/pngtree-pie-for-christmas-png-image_13968152.png"
                         alt="Combo Desayuno" class="w-full h-44 object-contain mx-auto" />
-                    <p class="text-lg font-bold mt-2">$12.00</p>
+                    <p class="text-lg font-bold mt-2">$8.40</p>
                     <p class="inline-block text-sm bg-yellow-400 text-black font-semibold px-2 py-0.5 rounded">
-                        -30% <span class="line-through text-gray-500 ml-2">$8.40</span>
+                        -30% <span class="line-through text-gray-500 ml-2">$12.00</span>
                     </p>
                     <p class="text-sm text-gray-700 mt-1">Combo Desayuno (Café + Sándwich + Postre)</p>
                 </div>
@@ -194,9 +197,9 @@
                 <div class="w-44 flex-shrink-0">
                     <img src="https://static.vecteezy.com/system/resources/previews/059/374/506/non_2x/golden-oatmeal-raisin-cookies-on-plate-delicious-and-crispy-isolated-on-transparent-background-free-png.png"
                         alt="Galletas de Avena" class="w-full h-44 object-contain mx-auto" />
-                    <p class="text-lg font-bold mt-2">$3.00</p>
+                    <p class="text-lg font-bold mt-2">$2.70</p>
                     <p class="inline-block text-sm bg-yellow-400 text-black font-semibold px-2 py-0.5 rounded">
-                        -10% <span class="line-through text-gray-500 ml-2">$2.70</span>
+                        -10% <span class="line-through text-gray-500 ml-2">$3.00</span>
                     </p>
                     <p class="text-sm text-gray-700 mt-1">Galletas de Avena (paquete de 6)</p>
                 </div>
@@ -206,7 +209,7 @@
 
 
     <!-- Sección de Reseñas -->
-    <section class="py-20 bg-gray-50">
+    <section id="reseñas" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 md:px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-amber-900 text-center mb-4">Lo que dicen nuestros clientes
             </h2>
@@ -354,7 +357,7 @@
                         </div>
                         <input type="hidden" id="rating_value" name="rating" value="0">
                     </div>
-                    
+
                     <!-- Comentario -->
                     <div>
                         <label for="user-comment" class="block text-gray-700 font-medium mb-2">Tu reseña</label>
@@ -390,66 +393,102 @@
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contact" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Visit Us</h2>
+    <section id="contact" class="py-20 bg-coffee-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-coffee-800 mb-12">Visitanos</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Location & Hours</h3>
-                        <p class="mb-4">123 Coffee Street, Brewtown, BT 12345</p>
-
-                        <div class="mb-6">
-                            <h4 class="font-semibold mb-2">Opening Hours:</h4>
-                            <p>Monday - Friday: 7:00 AM - 8:00 PM</p>
-                            <p>Saturday - Sunday: 8:00 AM - 6:00 PM</p>
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-coffee-700 mb-4">Información de Contacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-coffee-500 mt-1 mr-3"></i>
+                                <p>123 Brew Street, Coffeeville, CA 90210</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-coffee-500 mr-3"></i>
+                                <p>(555) 123-4567</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-coffee-500 mr-3"></i>
+                                <p>OriginCafe@hotmail.com</p>
+                            </div>
                         </div>
 
-                        <div>
-                            <h4 class="font-semibold mb-2">Contact Information:</h4>
-                            <p>Phone: (123) 456-7890</p>
-                            <p>Email: info@brewhaven.com</p>
+                        <h3 class="text-2xl font-semibold text-coffee-700 mt-8 mb-4">Horario de Apertura:</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Lunes - Viernes</span>
+                                <span>6:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sábado</span>
+                                <span>7:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Domingo</span>
+                                <span>7:00 AM - 6:00 PM</span>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
-                        <form class="space-y-4">
-                            <div>
-                                <input type="text" placeholder="Your Name"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-gold">
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Your Email"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-gold">
-                            </div>
-                            <div>
-                                <textarea placeholder="Your Message" rows="4"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-gold"></textarea>
-                            </div>
-                            <button type="submit"
-                                class="bg-coffee-gold text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition duration-300">Send
-                                Message</button>
-                        </form>
+                <div class="md:w-1/2">
+                    <div class="h-full w-full rounded-lg overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209121995!2d-73.9878449245251!3d40.74844097138992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1687897923902!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-amber-900 text-white py-8">
-        <div class="container mx-auto px-4 md:px-6 text-center">
-            <p>&copy; 2023 Origen Café.</p>
-            <div class="mt-4 flex justify-center space-x-6">
-                <a href="#" class="hover:text-amber-600 transition duration-300">Facebook</a>
-                <a href="#" class="hover:text-amber-600 transition duration-300">Instagram</a>
-                <a href="#" class="hover:text-amber-600 transition duration-300">Twitter</a>
+    <footer class="text-white py-12" style="background-color: #25190e;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Origen Café</h3>
+                    <p class="text-coffee-300">Café artesanal elaborado con esmero desde 2023.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-coffee-300 hover:text-white">Inicio</a></li>
+                        <li><a href="#about" class="text-coffee-300 hover:text-white">Nosotros</a></li>
+                        <li><a href="#menu" class="text-coffee-300 hover:text-white">Menu</a></li>
+                        <li><a href="#promos" class="text-coffee-300 hover:text-white">Promos</a></li>
+                        <li><a href="#reseñas" class="text-coffee-300 hover:text-white">Reseñas</a></li>
+                        <li><a href="#contact" class="text-coffee-300 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Síganos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-coffee-300 hover:text-white text-xl"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Hoja informativa</h4>
+                    <p class="text-coffee-300 mb-2">Suscríbete para recibir novedades y ofertas especiales</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-coffee-800">
+                        <button class="bg-coffee-600 px-4 py-2 rounded-r-lg hover:bg-coffee-700 transition">Suscribir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-coffee-700 mt-8 pt-8 text-center text-coffee-300">
+                <p>&copy; 2023 Origin Café.</p>
             </div>
         </div>
     </footer>
-    <script type="module" src="src/js/file01.js"></script>
+    <script type="module" src="src/js/file.js"></script>
     <script type="module" src="src/js/cailificacion.js"></script>
 </body>
-
 </html>
